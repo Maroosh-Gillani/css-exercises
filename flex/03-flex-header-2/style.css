@@ -8,10 +8,24 @@ body {
   font-family: Besley, serif;
 }
 
+/* 
+My solution -- This works fine, provided solution is just more efficient
+
 .header {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  padding: 8px;
+} */
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  padding: 8px;
+  justify-content: space-between; /* So I think it creates space between its immediate child, which in this case are the two new div classes I added (.left and .right) */
 }
 
 .profile-image {
@@ -43,6 +57,42 @@ a {
   color: rebeccapurple;
 }
 
+/* 
+My solution -- This works fine, provided solution is just more efficient
+
 ul {
   list-style-type: none;
+  display: flex;
+  padding: 0;
+  gap: 8px;
+} */
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  gap: 16px;
+}
+
+/* 
+My solution -- This works fine, provided solution is just more efficient
+
+.left {
+  display: flex;
+  margin-right: auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  margin-left: auto;
+  gap: 16px;
+  align-items: center;
+} */
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
